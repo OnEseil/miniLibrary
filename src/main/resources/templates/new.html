@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>create person</title>
+</head>
+<body>
+<form action="#" th:action="@{/people/new}" th:object="${person}" method="post">
+    <p>Введите ФИО: <input type="text" th:field="*{full_name}" /></p>
+    <p>Введите год рождения: <input type="text" th:field="*{birthday}" /></p>
+    <p><input type="submit" value="Создать!" /> <input type="reset" value="Сбросить!" /></p>
+</form>
+</body>
+</html>

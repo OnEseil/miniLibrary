@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+<form action="#" th:action="@{/person/{id}/edit(id=${person.getId()})}" th:object="${person}" method="post">
+    <p>Введите ФИО: <input type="text" th:field="*{full_name}" /></p>
+    <p>Введите год рождения: <input type="text" th:field="*{birthday}" /></p>
+    <p><input type="submit" value="Редактировать" /> <input type="reset" value="Сбросить!" /></p>
+</form>
+</body>
+</html>
